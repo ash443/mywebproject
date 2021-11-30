@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excursive</title>
+    <link rel="stylesheet" href="./styles/homestyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="description" content="This is Excursive travel official site" />
+    <meta name="keywords" content="Excursive,Travel" />
+    <link rel="shortcut icon" href="images/favicon.ico">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__left">
+            <i class="fa fa-bars" id="hamburger" onclick="hamburgerClicked()"></i>
+            <h1>Excursive</h1>
+        </div>
+        <div class="header__right">
+            <div class="header__rightBtn" onclick="buttonClicked()">
+                <i class="fa fa-pencil"></i>
+                <button class="hide">Reviews</button>
+            </div>
+
+            <div class="header__rightBtn" onclick="buttonClicked()">
+                <i class="fa fa-heart-o"></i>
+                <button class="hide">Trips</button>
+            </div>
+            <div class="header__rightBtn" onclick="buttonClicked()">
+                <i class="fa fa-bell-o"></i>
+                <button class="hide">Alerts</button>
+            </div>
+            <div id="signin" class="header__rightBtn" onclick="buttonClicked()">
+                <button id="buttonSignIn">Sign Out</button>
+            </div>
+
+
+        </div>
+
+
+    </header>
+    <div id="sidepanel" class="sidepanel">
+        <a href="javascript:void(0)" id="hamburgerClosebtn" onclick="closeHamburger()" class="font150">&times;</a>
+        <button class="hamburgerSignIn">Sign Out</button>
+        <a href="#" class="font120">Alerts</a>
+        <a href="#" class="font120">Trips</a>
+        <a href="#" class="font120">Bookings</a>
+        <hr style="width:90%;text-align:center;margin-bottom: 1.25rem;">
+        <a href="#">Flights</a>
+        <a href="#">Holiday Homes</a>
+        <a href="#">Hotels</a>
+        <a href="#">Restaurants</a>
+        <a href="#">Holiday Package</a>
+        <a href="#">Car Booking</a>
+        <a href="#">Places to Visit</a>
+        <a href="#">Cruise</a>
+    </div>
+    <div class="banner">
+        <div class="categories__container">
+            <div class="category">
+                <p>Flights</p>
+                <i class="fa fa-plane"></i>
+            </div>
+            <div class="category">
+                <p>Hotels</p>
+                <i class="fa fa-bed"></i>
+            </div>
+            <div class="category">
+                <p>Holiday Homes</p>
+                <i class="fa fa-home"></i>
+            </div>
+
+            <div class="category">
+                <p>Restaurants</p>
+                <i class="fa fa-cutlery"></i>
+            </div>
+            <div class="category">
+                <p>Car Hire</p>
+                <i class="fa fa-car"></i>
+            </div>
+            <div class="category">
+                <p>More</p>
+                <i class="fa fa-ellipsis-h"></i>
+            </div>
+        </div>
+        <div class="heading">
+            <h1>Thrilled about where you're going</h1>
+            <h3> Explore exciting things to do around the world.</h3>
+        </div>
+
+    </div>
+
+
+    <div class="container">
+        <main>
+            <div>
+                <div class="popular__tour">
+                    <div class="popular__tourText">
+                        <h2>Popular holiday packages</h2>
+                    </div>
+                </div>
+                <div class="popularTours__container">
+                    <div class="popularTours__menu">
+                        <img src="https://images.unsplash.com/photo-1516490701444-1daf45984537?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fHN3aXR6ZXJsYW5kfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
+                            alt="Maldives">
+                        <div class="tourCard__details">
+                            <p>Switzerland 2022 summer</p>
+                            <div class="reviews">
+                                <div>
+                                    <span class="fa fa-star checked">
+                                        <span class="fa fa-star checked">
+                                            <span class="fa fa-star checked">
+                                                <span class="fa fa-star checked">
+                                                    <span class="fa fa-star gray">
+                                </div>
+                                <p>3 reviews</p>
+                            </div>
+                            <div class="tour__cost__duration">
+                                <div class="tour__duration">
+                                    <span class="fa fa-clock-o gray"></span>
+                                    <p class="gray">5 days</p>
+                                </div>
+
+                                <p><span class="gray">from</span> $4000</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popularTours__menu">
+                        <img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=774&q=80"
+                            alt="Maldives">
+                        <div class="tourCard__details">
+                            <p>Maldives beach extravaganza</p>
+                            <div class="reviews">
+                                <div>
+                                    <span class="fa fa-star checked">
+                                        <span class="fa fa-star checked">
+                                            <span class="fa fa-star checked">
+                                                <span class="fa fa-star gray">
+                                                    <span class="fa fa-star gray">
+                                </div>
+                                <p>8 reviews</p>
+                            </div>
+                            <div class="tour__cost__duration">
+                                <div class="tour__duration">
+                                    <span class="fa fa-clock-o gray"></span>
+                                    <p class="gray">3 days</p>
+                                </div>
+
+                                <p><span class="gray">from</span> $2500</p>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="popularTours__menu">
+                        <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80"
+                            alt="Dubai">
+                        <div class="tourCard__details">
+                            <p>Dubai 2021 winter</p>
+                            <div class="reviews">
+                                <div>
+                                    <span class="fa fa-star checked">
+                                        <span class="fa fa-star checked">
+                                            <span class="fa fa-star checked">
+                                                <span class="fa fa-star checked">
+                                                    <span class="fa fa-star checked">
+                                </div>
+                                <p>12 reviews</p>
+                            </div>
+                            <div class="tour__cost__duration">
+                                <div class="tour__duration">
+                                    <span class="fa fa-clock-o gray"></span>
+                                    <p class="gray">6 days</p>
+                                </div>
+
+                                <p><span class="gray">from</span> $5400</p>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="cruiseDiv">
+
+                <h3>Cruise Package Sale Up for the year</h3>
+                <button>
+                    Explore
+                </button>
+            </div>
+            <div class="popular__tour">
+                <div class="popular__tourText">
+                    <h2>Places to visit</h2>
+                </div>
+            </div>
+            <div class="carousel relative">
+                <div class="image-container" id="imgs">
+
+                    <div class="one-image-container">
+                        <img src="https://images.unsplash.com/photo-1533850595620-7b1711221751?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8dHJhdmVsbGluZ3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
+                            alt="Switzerland">
+                        <text>Switzerland</text>
+                    </div>
+                    <div class="one-image-container">
+                        <img src="https://images.unsplash.com/photo-1474181487882-5abf3f0ba6c2?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c2hhbmdoYWl8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
+                            alt="Shanghai">
+                        <text>Shanghai</text>
+                    </div>
+
+                    <div class="one-image-container">
+                        <img src="https://images.unsplash.com/photo-1558024160-4bcccd62f54c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fHRyYXZlbGxpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
+                            alt="Venice">
+                        <text>Venice</text>
+                    </div>
+                    <div class="one-image-container">
+                        <img src="https://images.unsplash.com/photo-1619090125361-879aba634f8c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGNpdGllc3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
+                            alt="Italy">
+                        <text>Italy</text>
+                    </div>
+                    <div class="one-image-container">
+                        <img src="https://images.unsplash.com/photo-1517570123306-d58896657b2c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fGNpdGllc3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
+                            alt="Singapore">
+                        <text>Singapore</text>
+                    </div>
+                    <div class="one-image-container">
+                        <img src="https://images.unsplash.com/photo-1624821558130-b325d7946fc8?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjV8fHRyYXZlbGxpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
+                            alt="Arizona">
+                        <text>Arizona</text>
+                    </div>
+                    <div class="one-image-container">
+                        <img src="https://images.unsplash.com/photo-1568056358788-45e19d19c528?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjZ8fHRyYXZlbGxpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
+                            alt="Spiti Valley Himachal">
+                        <text>Spiti Valley Himachal</text>
+                    </div>
+                    <div class="one-image-container">
+                        <img src="https://images.unsplash.com/photo-1613967193490-1d17b930c1a1?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OTd8fHRyYXZlbGxpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
+                            alt="Japan">
+                        <text>Japan</text>
+                    </div>
+
+                    <div class="one-image-container">
+                        <img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dHJhdmVsbGluZ3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
+                            alt="Nepal">
+                        <text>Nepal</text>
+                    </div>
+
+                </div>
+
+                <a class="next position" id="right">&#10095;</a>
+                <a class="prev position" id="left">&#10094;</a>
+
+            </div>
+
+
+
+
+
+        </main>
+
+
+    </div>
+    <div class="feedback__container">
+        <div class="feedback__heading">
+            <h1>What our travellers say</h1>
+        </div>
+        <div class="userFeedback__container">
+            <div class="user__feedback">
+                <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80"
+                    alt="Avatar" class="avatar">
+                <h3>Alex Suprun</h3>
+                <p class="gray">Designer</p>
+                <div>
+                    <span class="fa fa-star checked">
+                        <span class="fa fa-star checked">
+                            <span class="fa fa-star checked">
+                                <span class="fa fa-star checked">
+                                    <span class="fa fa-star checked">
+                </div>
+                <p class="gray">Awesome Trip experience</p>
+            </div>
+            <div class="user__feedback">
+                <img src="https://images.unsplash.com/photo-1628890923662-2cb23c2e0cfe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                    alt="Avatar" class="avatar">
+                <h3>May Gauthier</h3>
+                <p class="gray">Entrepreneur</p>
+
+                <div>
+                    <span class="fa fa-star checked">
+                        <span class="fa fa-star checked">
+                            <span class="fa fa-star checked">
+                                <span class="fa fa-star checked">
+                                    <span class="fa fa-star checked">
+                </div>
+                <p class="gray">Awesome Trip experience</p>
+
+            </div>
+            <div class="user__feedback">
+                <img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=580&q=80"
+                    alt="Avatar" class="avatar">
+                <h3>Nicolas</h3>
+                <p class="gray">Travel Enthusiast</p>
+                <div>
+                    <span class="fa fa-star checked">
+                        <span class="fa fa-star checked">
+                            <span class="fa fa-star checked">
+                                <span class="fa fa-star checked">
+                                    <span class="fa fa-star checked">
+                </div>
+                <p class="gray">Awesome Trip experience</p>
+
+            </div>
+
+        </div>
+
+    </div>
+    <footer>&copy Excursive
+        <address> Institute of Advanced Technology,<br>
+            International Graduate School,<br>
+
+            Hayden Street, Toronto
+        </address>
+        <a href="./contact-us.html">Contact Us</a>
+    </footer>
+    <script src="./js/home.js"></script>
+</body>
+
+</html>
