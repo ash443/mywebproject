@@ -106,3 +106,11 @@ margin-bottom: 0;
 .login__form__hidden{
     display: none;
 }
+
+  
+  .error__border{
+    border-color: #ffdddd;
+    background-color: #ffdddd;
+  }
+  
+  
