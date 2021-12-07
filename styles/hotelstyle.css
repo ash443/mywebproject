@@ -314,3 +314,18 @@ img {
 #deal {
   text-align: center;
 }
+
+#slides img {
+	display: none;
+}
+#slide {
+	height: 25vw;
+  width: 65vw;
+  display: flex;
+  align-self: center;
+}
+#banner {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+}
