@@ -5,7 +5,6 @@
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
-
   /* begin of change - this is done for footer to stick to bottom */
   /* min width will take the device width as the min width, and put scroll bar after that */
   min-height: 100vh;
@@ -13,7 +12,41 @@ body {
   flex-direction: column;
   /* end of change - this is done for footer to stick to bottom */
   align-items: center;
-  min-width: 300px;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  /* min-width: 160px; */
+  width: 100%;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  top: 48px;
+  left: 0px;
+  overflow: auto;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+  display: block;
 }
 .carousel img {
   height: 300px;
@@ -63,7 +96,7 @@ body {
   height: 3.5rem;
   z-index: 1000;
 }
-#hamburger{
+#hamburger {
   font-size: 220%;
   cursor: pointer;
   display: none;
@@ -76,6 +109,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 0 2rem;
+  cursor: pointer;
 }
 
 .header__right {
@@ -94,14 +128,14 @@ body {
   cursor: pointer;
 }
 
-.hamburgerSignIn{
+.hamburgerSignIn {
   background-color: black;
   border-radius: 20px;
   cursor: pointer;
   color: white;
   font-size: large;
   padding: 0.5rem 2rem;
-  margin-left:2rem;
+  margin-left: 2rem;
 }
 
 .header__rightBtn {
@@ -120,7 +154,7 @@ body {
   border-radius: 15px;
 }
 
-.sidepanel{
+.sidepanel {
   width: 0;
   position: fixed;
   z-index: 1;
@@ -142,14 +176,14 @@ body {
   cursor: pointer;
   transition: 0.3s;
 }
-.font120{
+.font120 {
   font-size: 120% !important;
   font-weight: bold;
 }
-#hamburgerClosebtn{
-  position:absolute;
-  top:0;
-  right:0;
+#hamburgerClosebtn {
+  position: absolute;
+  top: 0;
+  right: 0;
   font-size: 150% !important;
 }
 
@@ -167,178 +201,187 @@ main {
 
 footer {
   text-align: center;
-  background-color: linen;
+  background: rgb(60, 60, 60);
   /* begin of change - this is done for footer to stick to bottom */
   margin-top: auto;
   /* end of change - this is done for footer to stick to bottom */
-  padding: 1rem;
   width: 100%;
 }
 .banner {
-    width: 100vw;
-    height: 85vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-     background-image: url("https://images.unsplash.com/photo-1508672019048-805c876b67e2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1219&q=80"); 
+  width: 100vw;
+  height: 85vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("https://images.unsplash.com/photo-1508672019048-805c876b67e2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1219&q=80");
+  /* Begin of  -A layer of gray to make the banner text clearer above the image */
+  position: relative;
+  /* End of  -A layer of gray to make the banner text clearer above the image */
 }
 .banner::before {
-    content: "";
-    background-color: rgba(0, 0, 0, 0.25);
+  content: "";
+  background-color: rgba(0, 0, 0, 0.25);
 }
 .banner img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
-.heading{
-    color: white;
-    margin: 4rem auto;
+/* Begin of  -A layer of gray to make the banner text clearer above the image */
+.banner__backgroundColor {
+  background: rgba(0, 0, 0, 0.3);
+  width: 100vw;
+  height: 85vh;
+  position: absolute;
+}
+/* End of  -A layer of gray to make the banner text clearer above the image */
+
+.heading {
+  color: white;
+  margin: 4rem auto;
 }
 
-.heading h1, h3 {
-    text-align: center;
+.heading h1,
+h3 {
+  text-align: center;
 }
 .heading h1 {
-    font-size: 350%;
+  font-size: 350%;
 }
 .popular__tour {
-    padding: 2rem 1rem 0;
-
+  padding: 2rem 1rem 0;
 }
-.popular__tourText{
-    font-weight: 600;
-    position: relative;
-    line-height: 25px;
-    padding-bottom: 1px;
-    margin-bottom: 25px;
-    margin-top: 0;
+.popular__tourText {
+  font-weight: 600;
+  position: relative;
+  line-height: 25px;
+  padding-bottom: 1px;
+  margin-bottom: 25px;
+  margin-top: 0;
 }
 
 .popular__tourText::after {
-    position: absolute;
-    content: "";
-    height: 2px;
-    width: 80px;
-    background: #5191FA;
-    bottom: 0;
-    left: 0;
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 80px;
+  background: #5191fa;
+  bottom: 0;
+  left: 0;
 }
 
-.popularTours__container{
-   
-    display: flex;
-    justify-content: space-between;
-    
+.popularTours__container {
+  display: flex;
+  justify-content: space-between;
 }
 .popularTours__menu {
-    height: fit-content;
-    flex: 0.3 1;
-    border: 1px solid lightgray;
-    border-radius: 0.7rem;
-
+  height: fit-content;
+  flex: 0.3 1;
+  border: 1px solid lightgray;
+  border-radius: 0.7rem;
 }
 
 .popularTours__menu img {
-    height: 200px;
-    object-fit: cover;
-    width:100%;
-    border-top-left-radius: 0.7rem;
-    border-top-right-radius: 0.7rem;
+  height: 200px;
+  object-fit: cover;
+  width: 100%;
+  border-top-left-radius: 0.7rem;
+  border-top-right-radius: 0.7rem;
 }
-.tourCard__details{
-    padding: 0 0.5rem;
+.tourCard__details {
+  padding: 0 0.5rem;
 }
-.checked{
-    color: orange;
-    
+.checked {
+  color: orange;
 }
-.gray{
-    color: gray;
+.gray {
+  color: gray;
 }
 
-.reviews{
-    display: flex;
-    align-items: center;
-  
-    
+.reviews {
+  display: flex;
+  align-items: center;
 }
 
 .reviews > p {
-    margin-left: 1rem;
-    color: gray
+  margin-left: 1rem;
+  color: gray;
 }
-.tour__duration{
-    display: flex;
-    align-items: center;
+.tour__duration {
+  display: flex;
+  align-items: center;
 }
-.tour__cost__duration{
-    display: flex;
-    justify-content: space-between;
+.tour__duration span {
+  padding-right: 6px;
 }
-.cruiseDiv{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: white;
-    height: 140px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width:100%;
-    margin: 4rem auto 2rem;
-    background-image: url("https://images.unsplash.com/photo-1578530332818-6ba472e67b9f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80");
+.tour__cost__duration {
+  display: flex;
+  justify-content: space-between;
 }
+.cruiseDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  height: 140px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  margin: 4rem auto 2rem;
+  background-image: url("https://images.unsplash.com/photo-1578530332818-6ba472e67b9f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80");
+}
+
 .cruiseDiv > button {
-    cursor: pointer;
-    border: none;
-    padding: 0.5rem 2rem;
-    border-radius: 12px;
+  cursor: pointer;
+  border: none;
+  padding: 0.5rem 2rem;
+  border-radius: 12px;
 }
 
 .feedback__container {
-    background-color: whitesmoke;
-    width: 100%;
-    margin: 2rem 0 0;
-    padding-bottom: 2rem;
+  background-color: whitesmoke;
+  width: 100%;
+  margin: 2rem 0 0;
+  padding-bottom: 2rem;
 }
-.feedback__heading{
-    text-align: center;
+.feedback__heading {
+  text-align: center;
 }
 .userFeedback__container {
-    display: flex;
-    padding: 0 5rem;
-    justify-content: space-between;
+  display: flex;
+  padding: 0 5rem;
+  justify-content: space-between;
 }
 
-.user__feedback{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.user__feedback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0.5rem;
 }
-.user__feedback > h3{
-margin-bottom: 0;
+.user__feedback > h3 {
+  margin-bottom: 0;
 }
 
-.avatar{
+.avatar {
   vertical-align: middle;
   width: 50px;
   height: 50px;
   border-radius: 50%;
 }
 
-
-
 .categories__container {
-    background: white;
-    border: 1px solid lightgray;
-    border-radius: 3rem;
-    width: 86%;
-    margin: 2rem auto;
+  background: white;
+  border: 1px solid lightgray;
+  border-radius: 3rem;
+  width: 86%;
+  margin: 2rem auto;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
- }
+}
 
 .category {
   display: flex;
@@ -361,8 +404,9 @@ margin-bottom: 0;
   color: white;
   background-color: black;
 }
-
-/* Next & previous buttons */
+.category a {
+  text-decoration: none;
+}
 .prev,
 .next {
   cursor: pointer;
@@ -376,13 +420,12 @@ margin-bottom: 0;
   border-radius: 50%;
   background-color: lightgray;
 }
- .position{
+.position {
   position: absolute;
   top: 50%;
-  /* z-index: -1; */
 }
 
-.relative{
+.relative {
   position: relative;
 }
 
@@ -391,46 +434,136 @@ margin-bottom: 0;
   right: 0;
 }
 
-
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover,
 .next:hover {
   background-color: white;
 }
 
-.marginTopBottom1rem{
-    margin:0 1rem;
+.marginTopBottom1rem {
+  margin: 0 1rem;
 }
 
-
-@media screen and (max-width:800px) {
+@media screen and (max-width: 800px) {
   .container {
-    
-    width: 100%;}
-
-    
+    width: 100%;
+  }
 }
-
-/* For hamburger in mobile */
-@media screen and (max-width:420px){
-  .header__rightBtn{
+@media screen and (max-width: 275px) {
+  .app__title {
     display: none;
   }
-#hamburger{
-  width:100%;
-  display: initial;
-  margin-right: 2rem;
- 
 }
-.categories__container{
+@media screen and (max-width: 420px) {
+  /* For hamburger in mobile */
+  .header__rightBtn {
     display: none;
+  }
+  #hamburger {
+    width: 100%;
+    display: initial;
+    margin-right: 2rem;
+  }
+  .categories__container {
+    display: none;
+  }
+
+  .carousel img {
+    height: 200px;
+  }
+  .prev,
+  .next {
+    font-size: 10px;
+  }
+
+  /* for reviews */
+  .userFeedback__container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 5rem;
+    justify-content: space-between;
+  }
 }
-}
+
+@media screen and (max-width: 1020px) {
   /* Removing right button text as screen size decrease */
-  @media screen and (max-width:1020px){
-    .header__rightBtn .hide{
-      display: none;
-      
-    }
-    
+  .header__rightBtn .hide {
+    display: none;
+  }
+  /* Moving popular tour cards vertically place */
+  .popularTours__container {
+    display: inherit;
+    justify-content: space-between;
+  }
+  .popularTours__menu {
+    margin: 1rem 0.2rem;
+  }
+  /* corousal spacing */
+  .one-image-container {
+    padding: 0.2rem;
+  }
+}
+
+/* footer responsive when screen size reduces */
+@media screen and (max-width: 720px) {
+  /* footer */
+  .footer_content {
+    display: flex;
+    flex-direction: column !important;
+  }
+  .footer_content p {
+    max-width: 15rem;
+    margin: 0;
+    text-align: inherit !important;
+  }
+  .footer_container {
+    font-size: xx-small;
+  }
+}
+
+.footer_container {
+  display: flex;
+  flex-direction: column;
+  font-size: small;
+  color: #bebdbd;
+}
+.footer_container a {
+  color: #bebdbd;
+  text-decoration: none;
+}
+.footer_container a:visited {
+  color: #bebdbd;
+  text-decoration: none;
+}
+.footer_content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem 4rem;
+}
+.footer_content ul {
+  list-style: none;
+  list-style-position: inside;
+  padding: 0;
+}
+
+.footer_content p {
+  max-width: 20rem;
+  margin: 0;
+}
+.footer-section__about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer__logo {
+  background-color: rgb(44, 43, 42);
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.logo-text {
+  color: rgb(80 170 174);
 }

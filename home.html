@@ -8,6 +8,7 @@
     <title>Excursive</title>
     <link rel="stylesheet" href="./styles/homestyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <meta name="description" content="This is Excursive travel official site" />
     <meta name="keywords" content="Excursive,Travel" />
     <link rel="shortcut icon" href="images/favicon.ico">
@@ -17,7 +18,7 @@
     <header class="header">
         <div class="header__left">
             <i class="fa fa-bars" id="hamburger" onclick="hamburgerClicked()"></i>
-            <h1>Excursive</h1>
+            <h1 class="app__title" onclick="(function(){window.location='./home.html'})()">Excursive</h1>
         </div>
         <div class="header__right">
             <div class="header__rightBtn" onclick="buttonClicked()">
@@ -44,56 +45,70 @@
     </header>
     <div id="sidepanel" class="sidepanel">
         <a href="javascript:void(0)" id="hamburgerClosebtn" onclick="closeHamburger()" class="font150">&times;</a>
-        <button class="hamburgerSignIn">Sign Out</button>
+        <button class="hamburgerSignIn" onclick="signout()">Sign Out</button>
         <a href="#" class="font120">Alerts</a>
         <a href="#" class="font120">Trips</a>
         <a href="#" class="font120">Bookings</a>
         <hr style="width:90%;text-align:center;margin-bottom: 1.25rem;">
-        <a href="#">Flights</a>
+        <a href="./flight.html">Flights</a>
         <a href="#">Holiday Homes</a>
         <a href="#">Hotels</a>
         <a href="#">Restaurants</a>
         <a href="#">Holiday Package</a>
-        <a href="#">Car Booking</a>
+        <a href="./carhire.html">Car Hire</a>
         <a href="#">Places to Visit</a>
         <a href="#">Cruise</a>
+        <a href="./aboutus.html">About Us</a>
+        <a href="#">Contact Us</a>
     </div>
     <div class="banner">
-        <div class="categories__container">
-            <div class="category" tabindex="0">
-                <p>Flights</p>
-                <i class="fa fa-plane"></i>
-            </div>
-            <div class="category" tabindex="0">
-                <p>Hotels</p>
-                <i class="fa fa-bed"></i>
-            </div>
-            <div class="category" tabindex="0">
-                <p>Holiday Homes</p>
-                <i class="fa fa-home"></i>
+        <div class="banner__backgroundColor">
+            <div class="categories__container">
+                <div class="category" tabindex="0" onclick="headerButtonClicked(this)">
+                    <p>Flights</p>
+                    <i class="fa fa-plane"></i>
+                </div>
+                <div class="category" tabindex="0" onclick="headerButtonClicked(this)">
+                    <p>Hotels</p>
+                    <i class="fa fa-bed"></i>
+                </div>
+                <div class="category" tabindex="0" onclick="headerButtonClicked(this)">
+                    <p>Holiday Homes</p>
+                    <i class="fa fa-home"></i>
+                </div>
+
+                <div class="category" tabindex="0" onclick="headerButtonClicked(this)">
+                    <p>Restaurants</p>
+                    <i class="fa fa-cutlery"></i>
+                </div>
+                <div class="category" tabindex="0" onclick="headerButtonClicked(this)">
+                    <p>Car Hire</p>
+                    <i class="fa fa-car"></i>
+                </div>
+                <div class="category dropdown" tabindex="0" onclick="moreButtonClicked()">
+                    <p>More</p>
+                    <i class="fa fa-ellipsis-h"></i>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="#">Holiday Package</a>
+                        <a href="#">Bookings</a>
+                        <a href="#">Cruise</a>
+                        <a href="#">Places to Visit</a>
+                        <a href="./aboutus.html">About Us</a>
+                        <a href="#">Contact Us</a>
+                        <a href="./faqs.html">FAQs</a>
+
+                    </div>
+                </div>
+
             </div>
 
-            <div class="category" tabindex="0">
-                <p>Restaurants</p>
-                <i class="fa fa-cutlery"></i>
+            <div class="heading">
+                <h1>Thrilled about where you're going</h1>
+                <h3> Explore exciting things to do around the world.</h3>
             </div>
-            <div class="category" tabindex="0">
-                <p>Car Hire</p>
-                <i class="fa fa-car"></i>
-            </div>
-            <!-- tabindex="0" = for accessibility -->
-            <div class="category" tabindex="0">
-                <p>More</p>
-                <i class="fa fa-ellipsis-h"></i>
-            </div>
-        </div>
-        <div class="heading">
-            <h1>Thrilled about where you're going</h1>
-            <h3> Explore exciting things to do around the world.</h3>
         </div>
 
     </div>
-
 
     <div class="container">
         <main>
@@ -106,9 +121,9 @@
                 <div class="popularTours__container">
                     <div class="popularTours__menu">
                         <img src="https://images.unsplash.com/photo-1516490701444-1daf45984537?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fHN3aXR6ZXJsYW5kfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
-                            alt="Maldives">
+                            alt="Switzerland 2022 Tour Package">
                         <div class="tourCard__details">
-                            <p>Switzerland 2022 summer</p>
+                            <p>Switzerland 2022</p>
                             <div class="reviews">
                                 <div>
                                     <span class="fa fa-star checked">
@@ -132,9 +147,9 @@
                     </div>
                     <div class="popularTours__menu">
                         <img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=774&q=80"
-                            alt="Maldives">
+                            alt="Maldives beaches Tour Package">
                         <div class="tourCard__details">
-                            <p>Maldives beach extravaganza</p>
+                            <p>Maldives beaches</p>
                             <div class="reviews">
                                 <div>
                                     <span class="fa fa-star checked">
@@ -160,7 +175,7 @@
                     </div>
                     <div class="popularTours__menu">
                         <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80"
-                            alt="Dubai">
+                            alt="Dubai 2021 winter Tour Package">
                         <div class="tourCard__details">
                             <p>Dubai 2021 winter</p>
                             <div class="reviews">
@@ -193,6 +208,7 @@
                 <button>
                     Explore
                 </button>
+
             </div>
             <div class="popular__tour">
                 <div class="popular__tourText">
@@ -204,49 +220,49 @@
 
                     <div class="one-image-container">
                         <img src="https://images.unsplash.com/photo-1533850595620-7b1711221751?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8dHJhdmVsbGluZ3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
-                            alt="Switzerland">
+                            alt="Places to visit in Switzerland">
                         <text>Switzerland</text>
                     </div>
                     <div class="one-image-container">
                         <img src="https://images.unsplash.com/photo-1474181487882-5abf3f0ba6c2?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c2hhbmdoYWl8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
-                            alt="Shanghai">
+                            alt="Places to visit in Shanghai">
                         <text>Shanghai</text>
                     </div>
 
                     <div class="one-image-container">
                         <img src="https://images.unsplash.com/photo-1558024160-4bcccd62f54c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fHRyYXZlbGxpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
-                            alt="Venice">
+                            alt="Places to visit in Venice">
                         <text>Venice</text>
                     </div>
                     <div class="one-image-container">
                         <img src="https://images.unsplash.com/photo-1619090125361-879aba634f8c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGNpdGllc3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
-                            alt="Italy">
+                            alt="Places to visit in Italy">
                         <text>Italy</text>
                     </div>
                     <div class="one-image-container">
                         <img src="https://images.unsplash.com/photo-1517570123306-d58896657b2c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fGNpdGllc3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
-                            alt="Singapore">
+                            alt="Places to visit in Singapore">
                         <text>Singapore</text>
                     </div>
                     <div class="one-image-container">
                         <img src="https://images.unsplash.com/photo-1624821558130-b325d7946fc8?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjV8fHRyYXZlbGxpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
-                            alt="Arizona">
+                            alt="Places to visit in Arizona">
                         <text>Arizona</text>
                     </div>
                     <div class="one-image-container">
                         <img src="https://images.unsplash.com/photo-1568056358788-45e19d19c528?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjZ8fHRyYXZlbGxpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
-                            alt="Spiti Valley Himachal">
+                            alt="Places to visit in Spiti Valley Himachal">
                         <text>Spiti Valley Himachal</text>
                     </div>
                     <div class="one-image-container">
                         <img src="https://images.unsplash.com/photo-1613967193490-1d17b930c1a1?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OTd8fHRyYXZlbGxpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
-                            alt="Japan">
+                            alt="Places to visit in Japan">
                         <text>Japan</text>
                     </div>
 
                     <div class="one-image-container">
                         <img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dHJhdmVsbGluZ3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
-                            alt="Nepal">
+                            alt="Places to visit in Nepal">
                         <text>Nepal</text>
                     </div>
 
@@ -256,10 +272,6 @@
                 <a class="prev position" id="left">&#10094;</a>
 
             </div>
-
-
-
-
 
         </main>
 
@@ -272,7 +284,7 @@
         <div class="userFeedback__container">
             <div class="user__feedback">
                 <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80"
-                    alt="Avatar" class="avatar">
+                    alt="Avatar of Alex Suprun" class="avatar">
                 <h3>Alex Suprun</h3>
                 <p class="gray">Designer</p>
                 <div>
@@ -286,7 +298,7 @@
             </div>
             <div class="user__feedback">
                 <img src="https://images.unsplash.com/photo-1628890923662-2cb23c2e0cfe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-                    alt="Avatar" class="avatar">
+                    alt="Avatar of May Gauthier" class="avatar">
                 <h3>May Gauthier</h3>
                 <p class="gray">Entrepreneur</p>
 
@@ -302,7 +314,7 @@
             </div>
             <div class="user__feedback">
                 <img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=580&q=80"
-                    alt="Avatar" class="avatar">
+                    alt="Avatar of Nicolas" class="avatar">
                 <h3>Nicolas</h3>
                 <p class="gray">Travel Enthusiast</p>
                 <div>
@@ -319,14 +331,80 @@
         </div>
 
     </div>
-    <footer>&copy Excursive
-        <address> Institute of Advanced Technology,<br>
-            International Graduate School,<br>
+    <footer>
 
-            Hayden Street, Toronto
-        </address>
-        <a href="./contact-us.html">Contact Us</a>
+        <div class="footer_container">
+            <div class="footer_content">
+
+                <div class="footer-section__about">
+                    <h1 class="logo-text"><span>Excursive</span></h1>
+
+                    <div class="contact">
+                        <span><i class="fa fa-phone"></i> &nbsp; 123-456-789</span><br />
+                        <span><i class="fa fa-envelope"></i> &nbsp; info@excursive.com</span>
+                        <p>
+                            Excursive is an online travel firm that provides a user-generated content website and mobile
+                            app,
+                            as well as a competitive purchase website. It also takes online reservations for
+                            transportation, lodging, vacation activities, and restaurants.
+                        </p>
+                    </div><br />
+                    <div class="socials">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section__links">
+                    <h2>Quick Links</h2>
+
+                    <ul>
+                        <a href="./contact-us.html">
+                            <li>Contact Us</li>
+                        </a>
+                        <a href="#">
+                            <li>FAQ</li>
+                        </a>
+                        <a href="#">
+                            <li> Holiday Packages</li>
+                        </a>
+                        <a href="#">
+                            <li>About Us</li>
+                        </a>
+                        <a href="#">
+                            <li>Careers</li>
+                        </a>
+                        <a href="#">
+                            <li>Trust & Safety</li>
+                        </a>
+                    </ul>
+                </div>
+
+                <div class="footer-section__termsandpolicy">
+                    <h2>Terms & Policy</h2>
+
+                    <ul>
+                        <a href="#">
+                            <li>Privacy Policy</li>
+                        </a>
+                        <a href="#">
+                            <li> Terms Of Use</li>
+                        </a>
+                        <a href="#">
+                            <li>Accessibility</li>
+                        </a>
+
+                    </ul>
+                </div>
+
+            </div>
+            <div class="footer__logo"> &copy; Excursive | Designed By Quintet </div>
+        </div>
+
     </footer>
+
+
     <script src="./js/home.js"></script>
 </body>
 
