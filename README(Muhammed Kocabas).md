@@ -31,13 +31,14 @@ Project is created with:
 To run this project, download zip and run the index.html manually.
 
 ## Features
-* About Us feature webpage of a travel website.
+* About Us and Cruise feature webpages of a travel website.
+
 
 
 ###To Do:
 
 * Add Fully Functional Bookings Page
-* Add Fully FUnctional Cruise Page
+
 
 
 ## Status
