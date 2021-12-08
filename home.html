@@ -21,7 +21,7 @@
             <h1 class="app__title" onclick="(function(){window.location='./home.html'})()">Excursive</h1>
         </div>
         <div class="header__right">
-            <div class="header__rightBtn" onclick="buttonClicked()">
+            <div class="header__rightBtn" onclick="(function(){window.location='./reviews.html'})()">
                 <i class="fa fa-pencil"></i>
                 <button class="hide">Reviews</button>
             </div>
@@ -39,7 +39,7 @@
             </div>
 
 
-        </div>
+        </div>  
 
 
     </header>
@@ -52,14 +52,14 @@
         <hr style="width:90%;text-align:center;margin-bottom: 1.25rem;">
         <a href="./flight.html">Flights</a>
         <a href="#">Holiday Homes</a>
-        <a href="#">Hotels</a>
-        <a href="#">Restaurants</a>
+        <a href="./hotel.html">Hotels</a>
+        <a href="./restaurant.html">Restaurants</a>
         <a href="#">Holiday Package</a>
         <a href="./carhire.html">Car Hire</a>
         <a href="#">Places to Visit</a>
-        <a href="#">Cruise</a>
+        <a href="./cruise.html">Cruise</a>
         <a href="./aboutus.html">About Us</a>
-        <a href="#">Contact Us</a>
+        <a href="./contact-us.html">Contact Us</a>
     </div>
     <div class="banner">
         <div class="banner__backgroundColor">
@@ -85,18 +85,18 @@
                     <p>Car Hire</p>
                     <i class="fa fa-car"></i>
                 </div>
-                <div class="category dropdown" tabindex="0" onclick="moreButtonClicked()">
+                <div class="category dropdown" tabindex="0" onclick="moreButtonClicked(this)">
                     <p>More</p>
                     <i class="fa fa-ellipsis-h"></i>
-                    <div id="myDropdown" class="dropdown-content">
+                    <div id="moreButtonDropdown" class="dropdown-content">
                         <a href="#">Holiday Package</a>
                         <a href="#">Bookings</a>
-                        <a href="#">Cruise</a>
+                        <a href="./cruise.html">Cruise</a>
                         <a href="#">Places to Visit</a>
                         <a href="./aboutus.html">About Us</a>
-                        <a href="#">Contact Us</a>
+                        <a href="./contact-us.html">Contact Us</a>
                         <a href="./faqs.html">FAQs</a>
-
+                        <a href="./reviews.html">Reviews</a>
                     </div>
                 </div>
 
@@ -205,7 +205,7 @@
             <div class="cruiseDiv">
 
                 <h3>Cruise Package Sale Up for the year</h3>
-                <button>
+                <button onclick="(function(){window.location='./cruise.html'})()">
                     Explore
                 </button>
 
@@ -369,7 +369,7 @@
                         <a href="#">
                             <li> Holiday Packages</li>
                         </a>
-                        <a href="#">
+                        <a href="./aboutus.html">
                             <li>About Us</li>
                         </a>
                         <a href="#">
