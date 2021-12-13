@@ -16,7 +16,6 @@ Accent Color: #f59e0b
 * {
   box-sizing: border-box;
 }
-/* Body */
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
@@ -24,27 +23,66 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 800px;
-  color: #1f2937;
 }
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  width: 100%;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  top: 48px;
+  left: 0px;
+  overflow: auto;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.show {
+  display: block;
+}
+
 .header {
   display: flex;
-  background-color: #50aaae;
+  background-color: rgb(80 170 174);
   top: 0;
   justify-content: space-between;
   align-items: center;
   color: white;
-  width: 100%;
+  width: 100vw;
   position: sticky;
   top: 0;
   height: 3.5rem;
+  z-index: 1000;
 }
-
+#hamburger {
+  font-size: 220%;
+  cursor: pointer;
+  display: none;
+}
+#hamburger:hover {
+  cursor: pointer;
+}
 .header__left {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 2rem;
+  cursor: pointer;
 }
 
 .header__right {
@@ -59,6 +97,18 @@ body {
 #signin {
   background-color: black;
   border-radius: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+.hamburgerSignIn {
+  background-color: black;
+  border-radius: 20px;
+  cursor: pointer;
+  color: white;
+  font-size: large;
+  padding: 0.5rem 2rem;
+  margin-left: 2rem;
 }
 
 .header__rightBtn {
@@ -75,6 +125,72 @@ body {
   cursor: pointer;
   background-color: rgb(122, 136, 146);
   border-radius: 15px;
+}
+
+.sidepanel {
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  z-index: 1001;
+}
+
+.sidepanel a {
+  padding: 0.75rem 0.75rem 0.75rem 2.5rem;
+  text-decoration: none;
+  color: black;
+  display: block;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.font120 {
+  font-size: 120% !important;
+  font-weight: bold;
+}
+#hamburgerClosebtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 150% !important;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+main {
+  padding: 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+footer {
+  text-align: center;
+  background: rgb(60, 60, 60);
+  margin-top: auto;
+  width: 100%;
+}
+.banner {
+  width: 100vw;
+  height: 80px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  background-image: url("https://stockphoto.com/search.php?q=kids+playing+outdoors");
+  position: relative;
+}
+.banner::before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.25);
 }
 
 /* Main */
@@ -294,7 +410,6 @@ a:visited {
   text-transform: uppercase;
 }
 
-/* Footer */
 /* Footer */
 .footer .footer-content .fa {
   padding: 0px;
@@ -609,5 +724,51 @@ a:visited {
   .form-2,
   .cruise-form {
     display: table-cell;
+  }
+}
+
+.dropdown-content a {
+  color: #1f2937;
+}
+
+@media screen and (max-width: 420px) {
+  /* For hamburger in mobile */
+
+  .header__rightBtn {
+    display: none;
+  }
+  #hamburger {
+    width: 100%;
+    display: initial;
+    margin-right: 2rem;
+  }
+
+  #moreButtonDropdown {
+    z-index: 2;
+  }
+}
+@media screen and (max-width: 1020px) {
+  .header__rightBtn .hide {
+    display: none;
+  }
+  .html {
+    width: 100%;
+  }
+
+  .categories__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: 1px black solid;
+    border-radius: 10px;
+    width: 90%;
+    height: 90%;
+    align-content: center;
+    justify-content: center;
+    margin: 20px;
+  }
+
+  .create-space {
+    height: 170px;
   }
 }

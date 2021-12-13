@@ -13,74 +13,105 @@
     />
   </head>
 <!-- body -->
-  <body>
-    <!-- joint group navigation starts -->
-    <header class="header">
+</head>
+<!-- START OF JOINT NAVIGATION BAR  -->
+<body>
+  <header class="header">
       <div class="header__left">
-        <h1>Excursive</h1>
+          <i class="fa fa-bars" id="hamburger" onclick="hamburgerClicked()"></i>
+          <h1 class="app__title" onclick="(function(){window.location='./home.html'})()">Excursive</h1>
       </div>
       <div class="header__right">
-        <div class="header__rightBtn" onclick="buttonClicked()">
-          <i class="fa fa-pencil"></i>
-          <button>Reviews</button>
-        </div>
+          <div class="header__rightBtn" onclick="(function(){window.location='./reviews.html'})()">
+              <i class="fa fa-pencil"></i>
+              <button class="hide">Reviews</button>
+          </div>
 
-        <div class="header__rightBtn" onclick="buttonClicked()">
-          <i class="fa fa-heart-o"></i>
-          <button>Trips</button>
-        </div>
-        <div class="header__rightBtn" onclick="buttonClicked()">
-          <i class="fa fa-bell-o"></i>
-          <button>Alerts</button>
-        </div>
-        <!-- <div class="header__rightBtn" onclick="buttonClicked()">
-              <i class="fa fa-bell-o"></i>
-              <button>Contact us</button>
+          <div class="header__rightBtn" onclick="buttonClicked()">
+              <i class="fa fa-heart"></i>
+              <button class="hide">Trips</button>
           </div>
           <div class="header__rightBtn" onclick="buttonClicked()">
-              <i class="fa fa-bell-o"></i>
-              <button>About</button>
-          </div> -->
-        <div id="signin" class="header__rightBtn" onclick="buttonClicked()">
-          <button>Sign in</button>
-        </div>
-      </div>
-    </header>
-    <div class="container">
-      <div class="categories__container">
-        <div class="category">
-          <p>Flights</p>
-          <i class="fa fa-plane"></i>
-        </div>
-        <div class="category">
-          <p>Hotels</p>
-          <i class="fa fa-bed"></i>
-        </div>
-        <div class="category">
-          <p>Holiday Homes</p>
-          <i class="fa fa-home"></i>
-        </div>
+              <i class="fa fa-bell"></i>
+              <button class="hide">Alerts</button>
+          </div>
+          <div id="signin" class="header__rightBtn" onclick="buttonClicked()">
+              <button id="buttonSignIn">Sign Out</button>
+          </div>
+      </div>  
+  </header>
 
-        <div class="category">
-          <p>Restaurants</p>
-          <i class="fa fa-cutlery"></i>
-        </div>
-        <div class="category">
-          <p>Car Hire</p>
-          <i class="fa fa-car"></i>
-        </div>
-        <div class="category">
-          <p>More</p>
-          <i class="fa fa-ellipsis-h"></i>
-        </div>
+
+  <div id="sidepanel" class="sidepanel">
+      <a href="javascript:void(0)" id="hamburgerClosebtn" onclick="closeHamburger()" class="font150">&times;</a>
+      <button class="hamburgerSignIn" onclick="signout()">Sign Out</button>
+      <a href="#" class="font120">Alerts</a>
+      <a href="#" class="font120">Trips</a>
+      <a href="booking.html" class="font120">Bookings</a>
+      <hr style="width:90%;text-align:center;margin-bottom: 1.25rem;">
+      <a href="./flight.html">Flights</a>
+      <a href="#">Holiday Homes</a>
+      <a href="./hotel.html">Hotels</a>
+      <a href="./restaurant.html">Restaurants</a>
+      <a href="#">Holiday Package</a>
+      <a href="./carhire.html">Car Hire</a>
+      <a href="./placestovisit.html">Places to Visit</a>
+      <a href="./cruise.html">Cruise</a>
+      <a href="./aboutus.html">About Us</a>
+      <a href="./contact-us.html">Contact Us</a>
+  </div>
+  <div class="banner">
+      <div class="banner__backgroundColor">
+          <div class="categories__container">
+              <div class="category" tabindex="0" onclick="headerButtonClicked(this)">
+                  <p>Flights</p>
+                  <i class="fa fa-plane"></i>
+              </div>
+              <div class="category" tabindex="0" onclick="headerButtonClicked(this)">
+                  <p>Hotels</p>
+                  <i class="fa fa-bed"></i>
+              </div>
+              <div class="category" tabindex="0" onclick="headerButtonClicked(this)">
+                  <p>Holiday Homes</p>
+                  <i class="fa fa-home"></i>
+              </div>
+
+              <div class="category" tabindex="0" onclick="headerButtonClicked(this)">
+                  <p>Restaurants</p>
+                  <i class="fa fa-utensil-spoon"></i>
+                  
+              </div>
+              <div class="category" tabindex="0" onclick="headerButtonClicked(this)">
+                  <p>Car Hire</p>
+                  <i class="fa fa-car"></i>
+              </div>
+              <div class="category dropdown" tabindex="0" onclick="moreButtonClicked(this)">
+                  <p>More</p>
+                  <i class="fa fa-ellipsis-h"></i>
+                  
+<!---------------------------------------Dropdown list from "More" Button-------------------------------------->
+                  <div id="moreButtonDropdown" class="dropdown-content">
+                      <a href="#">Holiday Package</a>
+                      <a href="booking.html">Bookings</a>
+                      <a href="./cruise.html">Cruise</a>
+                      <a href="./placestovisit.html">Places to Visit</a>
+                      <a href="./aboutus.html">About Us</a>
+                      <a href="./contact-us.html">Contact Us</a>
+                      <a href="./faqs.html">FAQs</a>
+                      <a href="./reviews.html">Reviews</a>
+                  </div>
+              </div>
+          </div>
       </div>
-      <main></main>
-    </div>
+  </div>
+</div>
+</div>
     <!-- joint group navigation ends -->
 
     <!-- About us page starts -->
 
     <!-- banner type top message -->
+    <p class="create-space"></p>
     <p class="mission">
       "Our mission is to reset the industry standards. Because we believe travel
       is a human right."
@@ -173,57 +204,78 @@
     </article>
     <!-- Stories about us ends -->
 
-    <!-- Joint group footer -->
-    <div class="footer">
-      <div class="footer-content">
+    <script src="js/aboutus.js"></script>
+  
+  </body>
+  
 
-        <div class="footer-section about">
+
+  <!-- ----------------------FOOTER---------------------------------------- -->
+  <div class="footer">
+    <div class="footer-content">
+
+      <div class="footer-section about">
         <h1 class="logo-text"><span>Excursive</span></h1>
         <p></p>
 
         <div class="contact">
           <span><i class="fa fa-phone"></i> &nbsp; 123-456-789</span>
           <span><i class="fa fa-envelope"></i> &nbsp; info@excursive.com</span>
-        </div>Excursive is an online travel firm that provides a user-generated content website and mobile app, 
-          as well as a competitive purchase website. It also takes online reservations for transportation, lodging, vacation activities, and restaurants.
+        </div>Excursive is an online travel firm that provides a user-generated content website and mobile app,
+        as well as a competitive purchase website. It also takes online reservations for transportation, lodging,
+        vacation activities, and restaurants.
         <div class="socials">
-          <a href="#"><i class ="fa fa-facebook"></i></a>
-          <a href="#"><i class ="fa fa-instagram"></i></a>
-          <a href="#"><i class ="fa fa-twitter"></i></a>
-          <a href="#"><i class ="fa fa-youtube"></i></a>
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-instagram"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+          <a href="#"><i class="fa fa-youtube"></i></a>
         </div>
-        </div>
-        <div class="footer-section links">
+      </div>
+      <div class="footer-section links">
         <h2>Quick Links</h2>
         <br>
         <ul>
-          <a href ="#"><li>FAQ</li></a>
-          <a href ="#"><li> Holiday Packages</li></a>
-          <a href ="#"><li>About Us</li></a>
-          <a href ="#"><li>Careers</li></a>
-          <a href ="#"><li>Trust & Safety</li></a>
+          <a href="faqs.html">
+            <li>FAQ</li>
+          </a>
+          <a href="#">
+            <li> Holiday Packages</li>
+          </a>
+          <a href="aboutus.html">
+            <li>About Us</li>
+          </a>
+          <a href="#">
+            <li>Careers</li>
+          </a>
+          <a href="#">
+            <li>Trust & Safety</li>
+          </a>
         </ul>
-      </div>  
-
-        <div class="footer-section contact-form">
-          <h2>Terms & Policy</h2>
-          <br>
-        <ul>
-          <a href ="#"><li>Privacy Policy</li></a>
-          <a href ="#"><li> Terms Of Use</li></a>
-          <a href ="#"><li>Accessibility</li></a>
-          
-        </ul>
-        </div>
       </div>
-    
-      <div class="footer-bottom">
-       &copy; Excursive | Designed By Quintet 
+
+      <div class="footer-section contact-form">
+        <h2>Terms & Policy</h2>
+        <br>
+        <ul>
+          <a href="#">
+            <li>Privacy Policy</li>
+          </a>
+          <a href="#">
+            <li> Terms Of Use</li>
+          </a>
+          <a href="#">
+            <li>Accessibility</li>
+          </a>
+
+        </ul>
       </div>
     </div>
-    <!-- joint group footer ends -->
-     
-    <script src="js/aboutus.js"></script>
-  
-  </body>
+
+    <div class="footer-bottom">
+      &copy; Excursive | Designed By Quintet
+    </div>
+  </div>
+
 </html>
+
+
