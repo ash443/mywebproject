@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excursive</title>
+    <link rel="stylesheet" href="styles/homes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__left">
+            <h1>Excursive</h1>
+        </div>
+        <div class="header__right">
+            <div class="header__rightBtn" onclick="buttonClicked()">
+                <i class="fa fa-pencil"></i>
+                <button>Reviews</button>
+            </div>
+
+            <div class="header__rightBtn" onclick="buttonClicked()">
+                <i class="fa fa-heart-o"></i>
+                <button>Trips</button>
+            </div>
+            <div class="header__rightBtn" onclick="buttonClicked()">
+                <i class="fa fa-bell-o"></i>
+                <button>Alerts</button>
+            </div>
+            <!-- <div class="header__rightBtn" onclick="buttonClicked()">
+                <i class="fa fa-bell-o"></i>
+                <button>Contact us</button>
+            </div>
+            <div class="header__rightBtn" onclick="buttonClicked()">
+                <i class="fa fa-bell-o"></i>
+                <button>About</button>
+            </div> -->
+            <div id="signin" class="header__rightBtn" onclick="buttonClicked()">
+                <button>Sign in</button>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="categories__container">
+            <div class="category" id="nav_flight" onclick="headerButtonClicked(this)">
+                <p>Flights</p>
+                <i class="fa fa-plane"></i>
+            </div>
+            <div class="category" id="nav_hotel" onclick="headerButtonClicked(this)">
+                <p>Hotels</p>
+                <i class="fa fa-bed"></i>
+            </div>
+            <div class="category" id="nav_holiday_homes" onclick="headerButtonClicked(this)">
+                <p>Holiday Homes</p>
+                <i class="fa fa-home"></i>
+            </div>
+            <div class="category" id="nav_restaurants" onclick="headerButtonClicked(this)">
+                <p>Restaurants</p>
+                <i class="fa fa-cutlery"></i>
+            </div>
+            <div class="category" id="nav_car_hire" onclick="headerButtonClicked(this)">
+                <p>Car Hire</p>
+                <i class="fa fa-car"></i>
+            </div>
+            <div class="category" id="nav_more">
+                <p>More</p>
+                <i class="fa fa-ellipsis-h"></i>
+            </div>
+        </div>
+        <aside>
+            <div id="sidebar">
+                <div id="suitability">
+                    <h4 class="sidebarh3">Suitability</h4>
+                    <input type="checkbox" class="stops" name="stops" value="kid"/>Kid friendly <br/>
+                    <input type="checkbox" class="stops" name="stops" value="elder"/>Elder access <br/>
+                    <input type="checkbox" class="stops" name="stops" value="pet"/>Pet friendly<br/>
+                    <input type="checkbox" class="stops" name="stops" value="wheelchair"/>Wheelchair access<br/>
+                    <input type="checkbox" class="stops" name="stops" value="wheelchair"/>Business travel<br/>
+                    <input type="checkbox" class="stops" name="stops" value="wheelchair"/>Smoking allowed<br/>
+                </div>
+                <div id="bathrooms">
+                    <h4 class="sidebarh3">Bathrooms</h4>
+                    <select id="bathroom" name="bathroom">
+                        <option value="Any" selected>Any</option>
+                        <option value="1">1+</option>
+                        <option value="2">2+</option>
+                        <option value="3">3+</option>
+                        <option value="4">4+</option>
+                    </select><br/>
+                </div>
+                <div id="amenities">
+                    <h4 class="sidebarh3">Amenities</h4>
+                    <input type="checkbox" class="airlines" name="airlines" value="internet"/>Internet <br/>
+                    <input type="checkbox" class="airlines" name="airlines" value="etihad"/>Washer/Dryer <br/>
+                    <input type="checkbox" class="airlines" name="airlines" value="emirates"/>Elevator/Lift access<br/>
+                    <input type="checkbox" class="airlines" name="airlines" value="emirates"/>Wi-Fi<br/>
+                    <input type="checkbox" class="airlines" name="airlines" value="emirates"/>Other outdoor space<br/>
+                    <input type="checkbox" class="airlines" name="airlines" value="emirates"/>Parking<br/>
+                    <input type="checkbox" class="airlines" name="airlines" value="emirates"/>Garden<br/>
+                    <input type="checkbox" class="airlines" name="airlines" value="emirates"/>Grill<br/>
+                    <input type="checkbox" class="airlines" name="airlines" value="emirates"/>Air Conditioning<br/>
+                    <input type="checkbox" class="airlines" name="airlines" value="emirates"/>Hot Tub<br/>
+                    <input type="checkbox" class="airlines" name="airlines" value="emirates"/>Sauna<br/>
+                    <input type="checkbox" class="airlines" name="airlines" value="emirates"/>Fireplace<br/>
+                    <input type="checkbox" class="airlines" name="airlines" value="emirates"/>TV<br/>
+                    <input type="checkbox" class="airlines" name="airlines" value="emirates"/>Private Pool<br/>
+                </div>
+                <div id="property_type">
+                    <h4 class="sidebarh3">Property type</h4>
+                    <input type="checkbox" class="quality" name="quality" value="apartment"/>Condominium/Apartment <br/>
+                    <input type="checkbox" class="quality" name="quality" value="rental_house"/>Holiday Rental House <br/>
+                    <input type="checkbox" class="quality" name="quality" value="room_private"/>Private Room <br/>
+                    <input type="checkbox" class="quality" name="quality" value="villa"/>Villa <br/>
+                </div>
+            </div>
+        </aside>
+        <main>
+            <h2>Holiday Homes result for Zurich in Switzerland</h2>
+            <div id="results">
+                <div id="search_results">
+                    <img src="images/markus-spiske-g5ZIXjzRGds-unspla.jpg" alt="" />
+                    <h2 class="home_name">EMA House Serviced Apartment, 1 Bedroom.</h2>
+                    <div class="home_inner">
+                        <div class="details_left">
+                            <p>1 bedroom</p>
+                            <p>1 bathroom</p>
+                            <p>Sleeps 3</p>
+                        </div>
+                        <div class="details_right">
+                            <label for="birthday">Check-in:</label>
+                            <input type="date" id="check-in" name="check-in" placeholder="check-in"> <br/>
+                            <label for="birthday">Check-out:</label>
+                            <input type="date" id="check-in" name="check-out" placeholder="check-out"> <br/>
+                            <input type="button" value="Show Prices">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="spacing_search_result"></div>
+
+                <div id="search_results">
+                    <img src="images/home1.jpg" alt="" />
+                    <h2 class="home_name">Jacuzzi-Penthouse Münsterhof </h2>
+                    <div class="home_inner">
+                        <div class="details_left">
+                            <p>2 bedroom</p>
+                            <p>2 bathroom</p>
+                            <p>Sleeps 8</p>
+                        </div>
+                        <div class="details_right">
+                            <label for="birthday">Check-in:</label>
+                            <input type="date" id="check-in" name="check-in" placeholder="check-in"> <br/>
+                            <label for="birthday">Check-out:</label>
+                            <input type="date" id="check-in" name="check-out" placeholder="check-out"> <br/>
+                            <input type="button" value="Show Prices">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="spacing_search_result"></div>
+
+                <div id="search_results">
+                    <img src="images/home2.jpg" alt="" />
+                    <h2 class="home_name">High Class Houses </h2>
+                    <div class="home_inner">
+                        <div class="details_left">
+                            <p>1 bathroom</p>
+                            <p>1 Private Pool</p>
+                            <p>Sleeps 3</p>
+                        </div>
+                        <div class="details_right">
+                            <label for="birthday">Check-in:</label>
+                            <input type="date" id="check-in" name="check-in" placeholder="check-in"> <br/>
+                            <label for="birthday">Check-out:</label>
+                            <input type="date" id="check-in" name="check-out" placeholder="check-out"> <br/>
+                            <input type="button" value="Show Prices">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="spacing_search_result"></div>
+
+            </div>
+        </main>
+    </div>
+    <footer>&copy Excursive
+        <address> Institute of Advanced Technology,<br>
+            International Graduate School,<br>
+
+            Hayden Street, Toronto
+        </address>
+    </footer>
+
+    <script src="js/homes.js"></script>
+
+</body>
+    
+</html>

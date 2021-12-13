@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Excursive</title>
+    <title>Excursive-Hotel</title>
     <link rel="stylesheet" href="styles/hotelstyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" href="images/favicon.ico">
@@ -45,24 +45,23 @@
     </header>
     <div class="container">
         <div class="categories__container">
-            <div class="category" id="nav_flight" onclick="onNavFlightClick()">
+            <div class="category" id="nav_flight" onclick="headerButtonClicked(this)">
                 <p>Flights</p>
                 <i class="fa fa-plane"></i>
             </div>
-            <div class="category" id="nav_hotel" onclick="onNavHotelClick()">
+            <div class="category" id="nav_hotel" onclick="headerButtonClicked(this)">
                 <p>Hotels</p>
                 <i class="fa fa-bed"></i>
             </div>
-            <div class="category">
+            <div class="category" onclick="headerButtonClicked(this)">
                 <p>Holiday Homes</p>
                 <i class="fa fa-home"></i>
             </div>
-
-            <div class="category">
+            <div class="category" onclick="headerButtonClicked(this)">
                 <p>Restaurants</p>
                 <i class="fa fa-cutlery"></i>
             </div>
-            <div class="category">
+            <div class="category" onclick="headerButtonClicked(this)">
                 <p>Car Hire</p>
                 <i class="fa fa-car"></i>
             </div>

@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  box-sizing: border-box;
+}
+/* Body */
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 720px;
+}
+/* Header */
+
+.header {
+  display: flex;
+  background-color: rgb(80 170 174);
+  top: 0;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  height: 3.5rem;
+}
+
+.header__left {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+
+.header__right {
+  display: flex;
+  padding: 0 2rem;
+}
+
+.header__right button {
+  border: none;
+  background: none;
+}
+#signin {
+  background-color: black;
+  border-radius: 20px;
+}
+
+.header__rightBtn {
+  padding: 10px;
+}
+
+.header__rightBtn button {
+  cursor: pointer;
+  color: white;
+  font-size: medium;
+}
+
+.header__rightBtn:hover {
+  cursor: pointer;
+  background-color: rgb(122, 136, 146);
+  border-radius: 15px;
+}
+
+/* Main */
+main {
+  padding: 0 auto;
+  /*display: flex;
+  flex-direction: column;
+  align-items: flex-end;*/
+  width: 95%;
+  /*float: right;*/
+}
+
+/* Nav bar */
+.container {
+  /*display: flex;
+  flex-direction: column;*/
+  width: 80%;
+}
+
+.categories__container {
+    display: flex;
+    justify-content: center;
+}
+
+.category {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid gray;
+    height: 3rem;
+    width: 10rem;
+    border-radius: 10px;
+    margin: 1rem 0.5rem;
+    padding: 0 1rem;
+}
+
+.category i {
+    font-size: 1.4rem;
+}
+
+.category:hover {
+    cursor: pointer;
+    color: white;
+    background-color: black;
+}
+
+#nav_holiday_homes {
+    color: white;
+    background-color: black;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: linen;
+    margin-top: auto;
+    padding: 1rem;
+    width: 100%;
+}
+
+aside {
+    width: 20%;
+    float: left;
+    margin-left: 50px;
+    margin-right: 10px;
+}
+
+#sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#results {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#search_results {
+    border-collapse: collapse;
+    border: 2px solid black;
+    width: 100%;
+    /*display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;*/
+    flex-grow: 1;
+    box-shadow: 13px 13px 13px #666666;
+}
+
+img {
+    float: left;
+}
+
+.home_inner {
+    /*border-collapse: collapse;
+    border: 2px solid rgb(5, 5, 90);*/
+    float: right;
+    width: 62%;
+  }
+
+  .details_left {
+    width: 45%;
+    float: left;
+    border-right: 2px solid rgb(198, 198, 199);
+    height: 125px;
+  }
+
+  .details_right {
+    width: 40%;
+    float: right;
+  }
+
+  .spacing_search_result {
+    height: 25px;
+  }

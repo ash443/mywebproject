@@ -19,14 +19,14 @@ function addStopFilter(stopsCount) {
     }
   }
 
-function onNavFlightClick() {
-    window.location.href = "flight.html";
-}
+function headerButtonClicked(button) {
 
-function onNavHotelClick() {
-    window.location.href = "hotel.html";
-}
-
-function onNavHolidayHomesClick() {
-    window.location.href = "homes.html";
+    let buttonText = button.firstElementChild.firstChild.textContent;
+  
+    if (buttonText === "Flights") window.location = "./flight.html";
+    else if (buttonText === "Hotels") window.location = "./hotel.html";
+    else if (buttonText === "Holiday Homes") window.location = "./homes.html";
+    else if (buttonText === "Restaurants") window.location = "./restaurant.html";
+    else if (buttonText === "Car Hire") window.location = "./carhire.html";
+  
 }
