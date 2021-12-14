@@ -3,11 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Excursive</title>
+    <title>Excursive - Holiday Homes</title>
     <link rel="stylesheet" href="styles/homes.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <body>
@@ -82,8 +82,8 @@
                 </div>
                 <div id="bathrooms">
                     <h4 class="sidebarh3">Bathrooms</h4>
-                    <select id="bathroom" name="bathroom">
-                        <option value="Any" selected>Any</option>
+                    <select id="bathroom" name="bathroom" onChange="updateResult()">
+                        <option value="-1" selected>Any</option>
                         <option value="1">1+</option>
                         <option value="2">2+</option>
                         <option value="3">3+</option>
@@ -119,21 +119,23 @@
         <main>
             <h2>Holiday Homes result for Zurich in Switzerland</h2>
             <div id="results">
-                <div id="search_results">
+                <!--<div id="search_results">
                     <img src="images/markus-spiske-g5ZIXjzRGds-unspla.jpg" alt="" />
-                    <h2 class="home_name">EMA House Serviced Apartment, 1 Bedroom.</h2>
-                    <div class="home_inner">
-                        <div class="details_left">
-                            <p>1 bedroom</p>
-                            <p>1 bathroom</p>
-                            <p>Sleeps 3</p>
-                        </div>
-                        <div class="details_right">
-                            <label for="birthday">Check-in:</label>
-                            <input type="date" id="check-in" name="check-in" placeholder="check-in"> <br/>
-                            <label for="birthday">Check-out:</label>
-                            <input type="date" id="check-in" name="check-out" placeholder="check-out"> <br/>
-                            <input type="button" value="Show Prices">
+                    <div class="home_outer">
+                        <h2 class="home_name">EMA House Serviced Apartment</h2>
+                        <div class="home_inner">
+                            <div class="details_left">
+                                <p>1 bedroom</p>
+                                <p>1 bathroom</p>
+                                <p>Sleeps 3</p>
+                            </div>
+                            <div class="details_right">
+                                <label for="birthday">Check-in:</label><br/>
+                                <input type="date" id="check-in" name="check-in" placeholder="check-in"> <br/>
+                                <label for="birthday">Check-out:</label><br/>
+                                <input type="date" id="check-in" name="check-out" placeholder="check-out"> <br/><br/>
+                                <input type="button" value="Show Prices">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -142,19 +144,21 @@
 
                 <div id="search_results">
                     <img src="images/home1.jpg" alt="" />
-                    <h2 class="home_name">Jacuzzi-Penthouse Münsterhof </h2>
-                    <div class="home_inner">
-                        <div class="details_left">
-                            <p>2 bedroom</p>
-                            <p>2 bathroom</p>
-                            <p>Sleeps 8</p>
-                        </div>
-                        <div class="details_right">
-                            <label for="birthday">Check-in:</label>
-                            <input type="date" id="check-in" name="check-in" placeholder="check-in"> <br/>
-                            <label for="birthday">Check-out:</label>
-                            <input type="date" id="check-in" name="check-out" placeholder="check-out"> <br/>
-                            <input type="button" value="Show Prices">
+                    <div class="home_outer">
+                        <h2 class="home_name">Jacuzzi-Penthouse Münsterhof</h2>
+                        <div class="home_inner">
+                            <div class="details_left">
+                                <p>2 bedroom</p>
+                                <p>2 bathroom</p>
+                                <p>Sleeps 8</p>
+                            </div>
+                            <div class="details_right">
+                                <label for="birthday">Check-in:</label><br/>
+                                <input type="date" id="check-in" name="check-in" placeholder="check-in"> <br/>
+                                <label for="birthday">Check-out:</label><br/>
+                                <input type="date" id="check-in" name="check-out" placeholder="check-out"> <br/><br/>
+                                <input type="button" value="Show Prices">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -163,36 +167,83 @@
 
                 <div id="search_results">
                     <img src="images/home2.jpg" alt="" />
-                    <h2 class="home_name">High Class Houses </h2>
-                    <div class="home_inner">
-                        <div class="details_left">
-                            <p>1 bathroom</p>
-                            <p>1 Private Pool</p>
-                            <p>Sleeps 3</p>
-                        </div>
-                        <div class="details_right">
-                            <label for="birthday">Check-in:</label>
-                            <input type="date" id="check-in" name="check-in" placeholder="check-in"> <br/>
-                            <label for="birthday">Check-out:</label>
-                            <input type="date" id="check-in" name="check-out" placeholder="check-out"> <br/>
-                            <input type="button" value="Show Prices">
+                    <div class="home_outer">
+                        <h2 class="home_name">High Class Houses</h2>
+                        <div class="home_inner">
+                            <div class="details_left">
+                                <p>1 bathroom</p>
+                                <p>1 Private Pool</p>
+                                <p>Sleeps 3</p>
+                            </div>
+                            <div class="details_right">
+                                <label for="birthday">Check-in:</label><br/>
+                                <input type="date" id="check-in" name="check-in" placeholder="check-in"> <br/>
+                                <label for="birthday">Check-out:</label><br/>
+                                <input type="date" id="check-in" name="check-out" placeholder="check-out"> <br/><br/>
+                                <input type="button" value="Show Prices">
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="spacing_search_result"></div>
-
+            -->
             </div>
         </main>
     </div>
-    <footer>&copy Excursive
-        <address> Institute of Advanced Technology,<br>
-            International Graduate School,<br>
 
-            Hayden Street, Toronto
-        </address>
+    <footer>
+        <div class="footer">
+            <div class="footer-content">
+    
+            <div class="footer-section about">
+            <h1 class="logo-text"><span>Excursive</span></h1>
+            <p></p>
+    
+            <div class="contact">
+                <span><i class="fa fa-phone"></i> &nbsp; 123-456-789</span>
+                <span><i class="fa fa-envelope"></i> &nbsp; info@excursive.com</span>
+            </div>Excursive is an online travel firm that provides a user-generated content website and mobile app, 
+                as well as a competitive purchase website. It also takes online reservations for transportation, lodging, vacation activities, and restaurants.
+            <div class="socials">
+                <a href="#"><i class ="fa fa-facebook"></i></a>
+                <a href="#"><i class ="fa fa-instagram"></i></a>
+                <a href="#"><i class ="fa fa-twitter"></i></a>
+                <a href="#"><i class ="fa fa-youtube"></i></a>
+            </div>
+            </div>
+            <div class="footer-section links">
+            <h2>Quick Links</h2>
+            <br>
+            <ul>
+                <a href ="#"><li>FAQ</li></a>
+                <a href ="#"><li> Holiday Packages</li></a>
+                <a href ="#"><li>About Us</li></a>
+                <a href ="#"><li>Careers</li></a>
+                <a href ="#"><li>Trust & Safety</li></a>
+            </ul>
+            </div>  
+    
+            <div class="footer-section contact-form">
+                <h2>Terms & Policy</h2>
+                <br>
+            <ul>
+                <a href ="#"><li>Privacy Policy</li></a>
+                <a href ="#"><li> Terms Of Use</li></a>
+                <a href ="#"><li>Accessibility</li></a>
+                
+            </ul>
+            </div>
+            </div>
+        
+            <div class="footer-bottom">
+                &copy; Excursive | Designed By Quintet 
+            </div>
+       </div>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="js/homes.js"></script>
 
 </body>
