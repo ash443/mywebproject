@@ -1,3 +1,4 @@
+"use strict"
 //To open the hamburger sidepanel
 function hamburgerClicked() {
   const sidepanel = document.getElementById("sidepanel");
@@ -20,6 +21,7 @@ function signout() {
   localStorage.setItem("isLoggedIn", 0);
   window.location = "./login.html";
 }
+
 
 document.addEventListener("DOMContentLoaded", () => {
   //Dyanamic generating the contact info section using json file

@@ -1,3 +1,4 @@
+"use strict"
 const imgs = document.getElementById("imgs");
 const leftBtn = document.getElementById("left");
 const rightBtn = document.getElementById("right");
@@ -73,7 +74,7 @@ function headerButtonClicked(button) {
   if (buttonText === "Flights") window.location = "../flight.html";
   if (buttonText === "Car Hire") window.location = "../carhire.html";
   if (buttonText === "Hotels") window.location = "../hotel.html";
-  if (buttonText === "Holiday Homes") window.location = "../";
+  if (buttonText === "Holiday Homes") window.location = "../homes.html";
   if (buttonText === "Restaurants") window.location = "../restaurant.html";
  
 }

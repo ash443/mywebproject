@@ -65,7 +65,7 @@ body {
   display: flex;
   transform: translateX(0);
   transition: transform 0.5s ease-in-out;
-  z-index: -1;
+  /* z-index: -1; */
 }
 
 .one-image-container {
@@ -74,6 +74,7 @@ body {
   flex-direction: column;
   border-radius: 10px;
   padding: 1rem;
+  cursor: pointer!important;
 }
 
 .one-image-container text {
@@ -279,6 +280,7 @@ h3 {
   flex: 0.3 1;
   border: 1px solid lightgray;
   border-radius: 0.7rem;
+  cursor:pointer;
 }
 
 .popularTours__menu img {

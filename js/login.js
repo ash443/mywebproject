@@ -1,3 +1,4 @@
+"use strict"
 document.addEventListener("DOMContentLoaded", () => {
   //List of dummmy users & password
   const DUMMY_USERS = [

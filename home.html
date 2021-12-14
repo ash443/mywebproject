@@ -48,15 +48,15 @@
         <button class="hamburgerSignIn" onclick="signout()">Sign Out</button>
         <a href="#" class="font120">Alerts</a>
         <a href="#" class="font120">Trips</a>
-        <a href="#" class="font120">Bookings</a>
+        <a href="./booking.html" class="font120">Bookings</a>
         <hr style="width:90%;text-align:center;margin-bottom: 1.25rem;">
         <a href="./flight.html">Flights</a>
-        <a href="#">Holiday Homes</a>
+        <a href="./homes.html">Holiday Homes</a>
         <a href="./hotel.html">Hotels</a>
         <a href="./restaurant.html">Restaurants</a>
         <a href="#">Holiday Package</a>
         <a href="./carhire.html">Car Hire</a>
-        <a href="#">Places to Visit</a>
+        <a href="./placestovisit.html">Places to Visit</a>
         <a href="./cruise.html">Cruise</a>
         <a href="./aboutus.html">About Us</a>
         <a href="./contact-us.html">Contact Us</a>
@@ -89,10 +89,10 @@
                     <p>More</p>
                     <i class="fa fa-ellipsis-h"></i>
                     <div id="moreButtonDropdown" class="dropdown-content">
-                        <a href="#">Holiday Package</a>
-                        <a href="#">Bookings</a>
+                        <a href="./homes.html">Holiday Package</a>
+                        <a href="./booking.html">Bookings</a>
                         <a href="./cruise.html">Cruise</a>
-                        <a href="#">Places to Visit</a>
+                        <a href="./placestovisit.html">Places to Visit</a>
                         <a href="./aboutus.html">About Us</a>
                         <a href="./contact-us.html">Contact Us</a>
                         <a href="./faqs.html">FAQs</a>
@@ -115,14 +115,14 @@
             <div>
                 <div class="popular__tour">
                     <div class="popular__tourText">
-                        <h2>Popular holiday packages</h2>
+                        <h2>Popular holiday homes</h2>
                     </div>
                 </div>
                 <div class="popularTours__container">
-                    <div class="popularTours__menu">
+                    <div class="popularTours__menu" onclick="(function(){window.location='./homes.html'})()">
                         <img src="https://images.unsplash.com/photo-1516490701444-1daf45984537?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fHN3aXR6ZXJsYW5kfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
                             alt="Switzerland 2022 Tour Package">
-                        <div class="tourCard__details">
+                        <div class="tourCard__details" >
                             <p>Switzerland 2022</p>
                             <div class="reviews">
                                 <div>
@@ -215,12 +215,12 @@
                     <h2>Places to visit</h2>
                 </div>
             </div>
-            <div class="carousel relative">
-                <div class="image-container" id="imgs">
+            <div class="carousel relative" >
+                <div class="image-container" id="imgs" >
 
-                    <div class="one-image-container">
+                    <div class="one-image-container" onclick="(function(){ window.location='./placestovisit.html'})()">
                         <img src="https://images.unsplash.com/photo-1533850595620-7b1711221751?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8dHJhdmVsbGluZ3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
-                            alt="Places to visit in Switzerland">
+                            alt="Places to visit in Switzerland" >
                         <text>Switzerland</text>
                     </div>
                     <div class="one-image-container">
