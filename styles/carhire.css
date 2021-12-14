@@ -73,6 +73,7 @@ main {
   width: 100%;
   border: 2px solid black;
   background-color: #a59999;
+  height: 1405px;
 }
 
 /* Nav bar */
@@ -109,13 +110,7 @@ main {
 }
 
 /* Footer */
-footer {
-  text-align: center;
-  background-color: linen;
-  margin-top: auto;
-  padding: 1rem;
-  width: 100%;
-}
+
 
   
 
