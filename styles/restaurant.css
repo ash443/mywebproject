@@ -120,7 +120,7 @@ main {
   background-size: cover;
   height: 400px;
   padding-top: 10px;
-  background-image: url( ../images2/new.jpg );
+  background-image: url( ../images/new.jpg );
   
   
   box-shadow: 13px 13px 13px #666666;
@@ -165,7 +165,7 @@ main {
    padding-left: 25px;
    margin-top: 11px;
    height: 180px;
-   background-image: url(../images2/spices-6305702_1920.jpg );
+   background-image: url(../images/spices-6305702_1920.jpg );
    
  }
  aside {
